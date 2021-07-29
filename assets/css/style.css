@@ -18,7 +18,7 @@ body{
     color: #499D93;
     font-size: 34px;
     font-weight: bold;
-   
+
 }
 .title p{
     font-size: 23px;
@@ -45,7 +45,7 @@ body{
     font-size: 28px;
     font-weight: 600;
     color: #3E3E3E;
-  
+
 }
 
 .feature .thumbnail p{
@@ -56,7 +56,7 @@ body{
 .highlight{
     margin-top: 40px;
     color: #E41837;
-    
+
 }
 #content{
     padding-top: 60px;
@@ -72,16 +72,30 @@ body{
     background-image: url('../img/bg-rgb-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 100px 161px 200px;
+    padding: 100px 220px 200px;
 }
 #road h1{
     font-weight: bold;
     color: #3A3A3C;
 }
-#road p{
-    
+#road .wrap{
+    white-space: pre;
     font-size: 18px;
     color: #3A3A3C;
+}
+#road p{
+
+    font-size: 18px;
+    color: #3A3A3C;
+}
+#road .button-grp a{
+    margin-top: 20px;
+    border-radius: 14px;
+    padding: 10px 10px;
+}
+
+#content img{
+    
 }
 footer{
     margin-top: 50px;
@@ -89,7 +103,7 @@ footer{
 }
 footer .thumbnail{
     border-radius: 30px;
-    background-color: rgb(234,224,228);
+    background-color: rgb(214,229,235);
     padding-top: 40px;
     padding-bottom: 60px;
 }
@@ -98,12 +112,20 @@ footer h1{
     font-weight: bold;
 }
 footer p{
-    
+    white-space: pre;
     font-size: 18px;
 }
 footer .btn-danger{
     background-color: #E41837;
-    padding: 20px 50px;
+    padding: 15px 40px;
     border-radius: 10px;
     font-size: 18px;
+    color: white;
+    transition: ease-in-out 0.5s all;
+    margin-top: 15px;
+}
+footer .btn-danger:hover{
+    background-color: #E41837;
+    font-size: 19px;
+    font-weight: bold;
 }
