@@ -63,10 +63,12 @@ body{
 }
 #content ul li{
     font-size: 18px;
+    padding-left: 15px;
 }
 #content ul li::marker {
     color: #499D93;
     font-size: 18px;
+    
 }
 #road {
     background-image: url('../img/bg-rgb-2.jpg');
