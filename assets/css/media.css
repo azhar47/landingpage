@@ -1,37 +1,50 @@
 
 
 @media (max-width:767px){
+
+    #part1 {
+
+        padding-top: 50px;
+        padding-bottom: 75px;
+    }
+    .row.title {
+        margin-bottom: 20px;
+    }
+    .feature .thumbnail {
+        padding-top: 75px;
+        margin-bottom: 50px;
+    }
     #road {
-    background-image: url('../img/bg-rgb-2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 100px 10px 32px;
-}
-  #road .wrap{
-  white-space: normal;
-   
-}
-#road .mobile{
-    margin-bottom: 100px;
-}
-#road .mobile img{
-    margin: 0 auto;
-    width: 65%;
-}
-#content img{
-    width: 120%;
-}
-footer p{
-    white-space: normal;
-    
-}
-footer .btn-danger{
-    background-color: #E41837;
-    padding: 10px 30px;
-    border-radius: 10px;
-    font-size: 18px;
-    margin-top: 20px;
-}
+        background-image: url('../img/bg-rgb-2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 100px 10px 85px;
+    }
+    #road .wrap{
+        white-space: normal;
+
+    }
+    #road .mobile{
+        margin-bottom: 100px;
+    }
+    #road .mobile img{
+        margin: 0 auto;
+        width: 65%;
+    }
+    #content img{
+        width: 120%;
+    }
+    footer p{
+        white-space: normal;
+
+    }
+    footer .btn-danger{
+        background-color: #E41837;
+        padding: 10px 30px;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-top: 20px;
+    }
 
 }
