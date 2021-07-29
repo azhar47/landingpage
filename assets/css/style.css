@@ -103,7 +103,7 @@ footer{
 }
 footer .thumbnail{
     border-radius: 30px;
-    background-color: rgb(214,229,235);
+     background-image: linear-gradient(to top right, #E8E7EA,#E3EEEF, #EDDDE1);
     padding-top: 40px;
     padding-bottom: 60px;
 }

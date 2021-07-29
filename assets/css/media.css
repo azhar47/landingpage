@@ -15,6 +15,10 @@
 #road .mobile{
     margin-bottom: 100px;
 }
+#road .mobile img{
+    margin: 0 auto;
+    width: 65%;
+}
 #content img{
     width: 120%;
 }
