@@ -7,9 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <!-- Meta for Search Engine--->
-        <meta name="Keyword" content="PSD to Bootsrap,PSD to Html,Responsive Website">
-        <meta name="description" content="A responsive website">
+
 
         <!-- Title --->
         <title>Landing Page</title>
@@ -20,10 +18,13 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
 
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+
         <!-- BootStrap CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
-        <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
 
         <!-- Customize CSS Here -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
@@ -60,17 +61,7 @@
 
 
                 <div class="row feature">
-                    <div class="col-sm-4">
-                        <div class="thumbnail t-1 wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s">
-                            <div>
-                                <img src="assets/img/icon-1.png" class="img-responsive mg-auto" alt=""/>
-                            </div>
-                            <div>
-                                <h3>Increase Redemption</h3>
-                                <p>18% Increase in the redemption of coupons for future customer orders.</p>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-sm-4">
                         <div class="thumbnail t-2">
                             <div>
@@ -79,6 +70,17 @@
                             <div>
                                 <h3>Lower Complaints</h3>
                                 <p>Lowering customer complaint calls with HOWAZIT - DOMINO'S SAWA 50% drop in inbound call of complaints.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="thumbnail t-1 wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <div>
+                                <img src="assets/img/icon-1.png" class="img-responsive mg-auto" alt=""/>
+                            </div>
+                            <div>
+                                <h3>Increase Redemption</h3>
+                                <p>18% Increase in the redemption of coupons for future customer orders.</p>
                             </div>
                         </div>
                     </div>
@@ -108,21 +110,25 @@
                     <div class="col-sm-12 text-center">
                         <h1>See How it Works</h1>
                         <p>Howazit helps you effectively engage digitally with customers,
-                            <span class="wrap">to ensure you build solid, long-term relationships.</span></p>
+                            to ensure you build solid, long-term relationships</p>
                         <br> <br>
                     </div>
+
                     <div class="col-sm-4 mobile wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
                         <img src="assets/img/mobile.png" class="img-responsive" alt=""/>
                     </div>
                     <div class="col-sm-1"></div>
                     <div class="col-sm-7">
-                        <img src="assets/img/dices_1.png" class="img-responsive" alt=""/>
+                        <img src="assets/img/icon-table.png" class="img-responsive" alt=""/>
                     </div>
+
                 </div>
             </div>
         </section>
 
+        <script>
 
+        </script>
         <section id="content">
             <div class="container">
                 <div class="row">
@@ -158,20 +164,104 @@
                             <p>Howazit helps you effectively engage digitally with customers,walking them through 
 their customer journey, while managing and constantly analyzing all interactions to 
           ensure you build solid, long-term relationships.</p>
-                        <a href="#" class="btn btn-danger">Talk to us to learn more </a>
+                            <br>
+                            <div class="row">
+
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4">
+                                    <label>Enter You Email: </label>
+                                    <input type="email" id="email" class="form-control" placeholder="Enter your email address">
+                                </div>
+                                <div class="col-sm-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4">
+                                    <button type="button" id="pop" class="btn btn-block btn-danger fire">Talk to us to learn more </button>
+                                </div>
+                                <div class="col-sm-4"></div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- Jquery -->
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
+
+            <script>
+
+
+                $("#pop").click(function () {
+                    var hello = $("#email").val();
+                    if (hello) {
+                        let timerInterval
+                        Swal.fire({
+                            title: 'Got it, our team will contact you soon!',
+//                        html: 'I will close in <b></b> milliseconds.',
+                            icon: 'success',
+                            timer: 10000,
+                            timerProgressBar: false,
+                            didOpen: () => {
+
+                                timerInterval = setInterval(() => {
+                                    const content = Swal.getHtmlContainer()
+                                    if (content) {
+                                        const b = content.querySelector('b')
+                                        if (b) {
+                                            b.textContent = Swal.getTimerLeft()
+                                        }
+                                    }
+                                }, 100)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        }).then((result) => {
+                            /* Read more about handling dismissals below */
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                console.log('I was closed by the timer')
+                            }
+                        })
+                    } else {
+                        let timerInterval
+                        Swal.fire({
+                            title: 'Please Enter Your Email',
+//                        html: 'I will close in <b></b> milliseconds.',
+                            icon: 'error',
+                            timer: 10000,
+                            timerProgressBar: false,
+                            didOpen: () => {
+
+                                timerInterval = setInterval(() => {
+                                    const content = Swal.getHtmlContainer()
+                                    if (content) {
+                                        const b = content.querySelector('b')
+                                        if (b) {
+                                            b.textContent = Swal.getTimerLeft()
+                                        }
+                                    }
+                                }, 100)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        }).then((result) => {
+                            /* Read more about handling dismissals below */
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                console.log('I was closed by the timer')
+                            }
+                        })
+                    }
+                });
+
+            </script>
+        </footer>
+     
         <!-- bootstrap js -->
         <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="assets/js/wow.min.js" type="text/javascript"></script>
-        <!--Custom js -->
-        <script src="assets/js/custom.js" type="text/javascript"></script>
+
+      
 
 
 
