@@ -68,7 +68,7 @@ body{
 #content ul li::marker {
     color: #499D93;
     font-size: 18px;
-    
+
 }
 #road {
     background-image: url('../img/bg-rgb-2.jpg');
@@ -91,9 +91,35 @@ body{
     border-radius: 14px;
     padding: 10px 10px;
 }
-
+label{
+    font-size: 16px;
+}
+.swal2-title {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: .8em 1em 0;
+    color: #499D93;
+    font-size: 1.95em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    word-wrap: break-word;
+}
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: .25em;
+    background: initial;
+    background-color: #E41837;
+    color: #fff;
+    font-size: 1.8em;
+    padding: 10px 25px;
+}
+#email{
+    height: 40px;
+}
 #content img{
-    
+
 }
 footer{
     margin-top: 50px;
@@ -101,7 +127,7 @@ footer{
 }
 footer .thumbnail{
     border-radius: 30px;
-     background-image: linear-gradient(to top right, #E8E7EA,#E3EEEF, #EDDDE1);
+    background-image: linear-gradient(to top right, #E8E7EA,#E3EEEF, #EDDDE1);
     padding-top: 40px;
     padding-bottom: 60px;
 }
